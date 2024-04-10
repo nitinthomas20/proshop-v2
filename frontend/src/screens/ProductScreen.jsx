@@ -6,8 +6,10 @@ import {useState,useEffect} from 'react'
 import axios from 'axios';
 
 
+
 const ProductScreen = () => {
     const {id:productId} = useParams();
+
     const [product, setProducts] = useState({});
     useEffect(() => {
       const fetchProducts = async () => {
