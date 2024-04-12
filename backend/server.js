@@ -1,10 +1,14 @@
 import express from 'express'
 import products from './data/products.js';
 import dotenv from 'dotenv';
-dotenv.config();
-const port= 5000;
+import connectDB from './config/db.js';
 
+dotenv.config();
+const port= process.env.port; 
+connectDB();
+console.log(process.env.port)
 const app =express()
+ 
 app.get('/',(req,res) =>{
   res.send('Api is running')
 })
